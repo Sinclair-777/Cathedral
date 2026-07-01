@@ -5,8 +5,8 @@ local function FoggyWoggyGoAwayUwU()
     if atmos then
         local addr = tonumber(atmos.Address)
         if addr and addr > 4096 then
-            pcall(memory_write, "float", addr + 0xe8, 0) -- Density
-            pcall(memory_write, "float", addr + 0xf0, 0) -- Haze
+            pcall(memory_write, "float", addr + 0xd0, 0) -- Density
+            pcall(memory_write, "float", addr + 0xd8, 0) -- Haze
         end
     end
 end
